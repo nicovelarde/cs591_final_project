@@ -3,7 +3,7 @@ PPO Training Orchestration Script - RUN ALL AT ONCE
 ====================================================
 
 This script runs ALL experiments at once (no batching).
-Runs all 9 configurations with 3 seeds each = 27 total runs.
+Runs all 9 configurations with 1 seed each = 9 total runs.
 
 UPDATED CONFIGURATION (YOUR SPECIFICATIONS):
 ============================================
@@ -305,4 +305,4 @@ class ExperimentRunner:
 
 if __name__ == "__main__":
     runner = ExperimentRunner()
-    runner.run_all_experiments(num_seeds=3)
+    runner.run_all_experiments(num_seeds=1)
