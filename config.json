@@ -1,0 +1,28 @@
+{
+  "algorithm": "PPO",
+  "environment": "ALE/Pong-v5",
+  "training": {
+    "total_episodes": 5000,
+    "rollout_steps": 2048,
+    "epochs_per_update": 5,
+    "batch_size": 64
+  },
+  "network": {
+    "hidden_sizes": [512],
+    "activation": "relu",
+    "shared_extractor": true
+  },
+  "hyperparameters": {
+    "learning_rate": 3e-5,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_ratio": 0.2,
+    "entropy_coeff": 0.01,
+    "value_coeff": 0.5,
+    "max_grad_norm": 0.5
+  },
+  "exploration": {
+    "type": "entropy",
+    "entropy_schedule": "constant"
+  }
+}
